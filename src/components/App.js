@@ -20,15 +20,27 @@ class App extends Component {
       important: true,
       finishDate: null,
     },
-
     ]
   }
+
+  deleteTask = (id) =>{
+    console.log("delete w komponencie App" + id)
+    let tasks = this.state.tasks.filter(el => el.id !== id)
+    this.setState({
+      tasks
+    })
+  }
+
+  changeTaskStatus = (id) => {
+    console.log("change w komponencie App" + id)
+  }
+
 
   render() {
   return (
     <div className="App">
       <AddTask/>
-      <TaskList tasks={this.state.tasks}/>
+      <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus}/>
     </div>
   );
 }

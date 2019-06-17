@@ -3,6 +3,10 @@ import React, {Component} from 'react';
 
 class AddTask extends Component {
 
+    change = (e) =>{
+        console.log("change status")
+      }
+
       render() {
     return ( 
     <div>

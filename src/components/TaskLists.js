@@ -3,18 +3,24 @@ import Task from './Task';
 
 const TaskList= (props) => {
 
-    //mapowanie pojedynczego zadania
+    //mapowanie pojedynczego zadania i przekazanie go do komponentu Task
     const task = props.tasks.map(task => 
         <Task key={task.id}
-        task={task} />
+        task={task}
+        delete={props.delete}
+        change={props.change} />
     )
     return ( 
         <>
-        <div>
+        <div className="active"> 
          <h3>Zadania do zrobienia</h3>
          {task} 
         </div>
         <hr />
+
+        <div className="done">
+        <h3>Zadania zrobione</h3>   
+        </div>
         </>
     );
 }

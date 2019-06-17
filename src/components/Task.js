@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Task= (props) => {
+        const {text, date, id} = props.task;
         return (
-            <div>
+            <div className={props.task.key}>
             <p>
-            <strong>{props.task.text}</strong> -do<span>{props.task.date}</span>
-            <button onClick={() => console.log("zadanie zrobione") }>Zostało zrobione</button>
-            <button onClick={() => console.log("zadanie usunięte") }>x</button>
+            <strong>{text}</strong> -do<span>{date}</span>
+            <button onClick={() => props.change(id)}>Zostało zrobione</button>
+            <button onClick={() => props.delete(id)} >x</button>
             </p>
             </div>
         );

@@ -5,8 +5,8 @@ const Task= (props) => {
         return (
             <div className={props.task.key}>
             <p>
-            <strong>{text}</strong> -do<span>{date}</span>
-            <button onClick={() => props.change(id)}>Zostało zrobione</button>
+            <strong>{text}</strong> -do <span>{date}</span>
+            <button onClick={() => props.change(id)     }>Zostało zrobione</button>
             <button onClick={() => props.delete(id)} >x</button>
             </p>
             </div>

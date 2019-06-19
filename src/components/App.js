@@ -23,6 +23,41 @@ class App extends Component {
       important: true,
       finishDate: null,
     },
+    {id: 2,
+      text: 'przeczytać książke',
+      date: '2019-07-30',
+      active: true,
+      important: true,
+      finishDate: null,
+    },
+    {id: 3,
+      text: 'fryzjer',
+      date: '2019-06-21',
+      active: true,
+      important: true,
+      finishDate: null,
+    },
+    {id: 4,
+      text: 'iść w góry',
+      date: '2019-07-30',
+      active: true,
+      important: true,
+      finishDate: null,
+    },
+    {id: 5,
+      text: 'przejażdżka rowerowa',
+      date: '2019-06-21',
+      active: true,
+      important: true,
+      finishDate: null,
+    },
+    {id: 6,
+      text: 'trening',
+      date: '2019-06-21',
+      active: true,
+      important: true,
+      finishDate: null,
+    },
     ]
   }
 
@@ -56,6 +91,7 @@ class App extends Component {
   render() {
   return (
     <div className="App">
+      <h1>TOD APP</h1>
       <AddTask/>
       <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
     </div>

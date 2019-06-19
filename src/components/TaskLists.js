@@ -11,8 +11,8 @@ const TaskList= (props) => {
     //     change={props.change} />
     // )
 
-    const active = props.tasks.filter(task => task.active);
-    const done = props.tasks.filter(task => !task.active);
+  const active = props.tasks.filter(task => task.active);
+  const done = props.tasks.filter(task => !task.active);
     console.log(active, done);
 
     const activeTasks = active.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)

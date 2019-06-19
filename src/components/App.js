@@ -8,6 +8,7 @@ class App extends Component {
 
   state = {
     tasks: [
+      
       {id: 0,
       text: 'zaplanować podróż poślubną',
       date: '2019-07-30',
@@ -26,19 +27,19 @@ class App extends Component {
   }
 
   deleteTask = (id) =>{
-    console.log("delete w komponencie App" + id)
+   
     let tasks = [...this.state.tasks];
-    tasks = tasks.filter(el => el.id !== id)
+    tasks = tasks.filter(task => task.id !== id)
     this.setState({
       tasks
     })
   }
 
   changeTaskStatus = (id) => {
-    console.log("change w komponencie App" + id)
-    let tasks = [...this.state.tasks]; //kopia tablicy
-    tasks = tasks.forEach(task => {
-      if(task.id === id) {
+    console.log("change w stanie elementu o id " + id);
+    const tasks = Array.from(this.state.tasks);
+    tasks.forEach(task => {
+      if (task.id === id) {
         task.active = false;
         task.finishDate = new Date().getTime()
       }
@@ -48,6 +49,8 @@ class App extends Component {
     })
  
   }
+
+ 
 
 
   render() {
